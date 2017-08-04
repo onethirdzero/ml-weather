@@ -1,0 +1,32 @@
+,Original,Mapped,Mapped_Y1,Mapped_Y2
+0,Mainly Clear,Mainly Clear,Mainly Clear,Mainly Clear
+1,Mostly Cloudy,Mostly Cloudy,Mostly Cloudy,Mostly Cloudy
+2,Cloudy,Cloudy,Cloudy,Cloudy
+3,Rain Showers,Rain Showers,Rain Showers,Rain Showers
+4,Moderate Rain Showers,Moderate Rain Showers,Moderate Rain Showers,Moderate Rain Showers
+5,Clear,Clear,Clear,Clear
+6,Rain,Rain,Rain,Rain
+7,"Rain,Fog","Rain,Fog","Rain,Fog","Rain,Fog"
+8,Drizzle,Drizzle,Drizzle,Drizzle
+9,"Rain Showers,Fog","Rain Showers,Fog","Rain Showers,Fog","Rain Showers,Fog"
+10,Thunderstorms,Thunderstorms,Thunderstorms,Thunderstorms
+11,Fog,Fog,Fog,Fog
+12,"Drizzle,Fog","Drizzle,Fog","Drizzle,Fog","Drizzle,Fog"
+13,"Moderate Rain Showers,Fog","Moderate Rain Showers,Fog","Moderate Rain Showers,Fog","Moderate Rain Showers,Fog"
+14,"Rain,Drizzle","Rain,Drizzle","Rain,Drizzle","Rain,Drizzle"
+15,Moderate Rain,Moderate Rain,Moderate Rain,Moderate Rain
+16,"Moderate Rain,Drizzle","Moderate Rain,Drizzle","Moderate Rain,Drizzle","Moderate Rain,Drizzle"
+17,Heavy Rain,Heavy Rain,Heavy Rain,Heavy Rain
+18,"Moderate Rain,Fog","Moderate Rain,Fog","Moderate Rain,Fog","Moderate Rain,Fog"
+19,"Rain,Drizzle,Fog","Rain,Drizzle,Fog","Rain,Drizzle,Fog","Rain,Drizzle,Fog"
+20,"Heavy Rain,Fog","Heavy Rain,Fog","Heavy Rain,Fog","Heavy Rain,Fog"
+21,Snow Showers,Snow Showers,Snow Showers,Snow Showers
+22,Snow,Snow,Snow,Snow
+23,"Snow,Fog","Snow,Fog","Snow,Fog","Snow,Fog"
+24,"Rain,Snow","Rain,Snow","Rain,Snow","Rain,Snow"
+25,Freezing Fog,Freezing Fog,Freezing Fog,Freezing Fog
+26,"Rain,Snow,Fog","Rain,Snow,Fog","Rain,Snow,Fog","Rain,Snow,Fog"
+27,Moderate Snow,Moderate Snow,Moderate Snow,Moderate Snow
+28,"Rain Showers,Snow Showers,Fog","Rain Showers,Snow Showers,Fog","Rain Showers,Snow Showers,Fog","Rain Showers,Snow Showers,Fog"
+29,"Rain Showers,Snow Pellets","Rain Showers,Snow Pellets","Rain Showers,Snow Pellets","Rain Showers,Snow Pellets"
+30,"Rain Showers,Snow Showers","Rain Showers,Snow Showers","Rain Showers,Snow Showers","Rain Showers,Snow Showers"
