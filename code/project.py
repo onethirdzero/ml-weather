@@ -80,7 +80,7 @@ base_model = OurNetwork.network(classes = 2)
 # for layer in base_model.layers:
 #     layer.trainable = False
 x = Flatten(name='sub_flatten')(base_model.get_layer('block3_pool').output)
-x = Dense(32, activation='relu', name='sub_fc1')(x)
+x = Dense(64, activation='relu', name='sub_fc1')(x)
 x = Dropout(0.3)(x)
 sub_predictions = Dense(3, activation='sigmoid', name='sub_predictions')(x)
 predictions = (base_model.get_layer('predictions').output)
@@ -129,7 +129,7 @@ my_train_generator = my_img_generator(train_data,img_datagen,batch_size)
 my_test_generator = my_img_generator(test_data,img_datagen,batch_size)
 
 
-model.load_weights('final_models/sub_cnn.h5',by_name=True)
+model.load_weights('final_models/sub_cnn_b.h5',by_name=True)
 
 ###############################################################################
 # Data training
