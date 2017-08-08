@@ -1,4 +1,4 @@
-
+import sys
 import numpy as np
 import pandas as pd
 from keras import optimizers
@@ -13,7 +13,15 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
 IMSIZE = (196, 196)
 
-PHOTO_PATH = r"/Users/jundali/Desktop/katkam-scaled"
+if(len(sys.argv)<2):
+    print("Please supply image path.")
+    print("Exapmle:")
+    print("python project.py /PATH/TO/IMAGE")
+    print("Exiting.....")
+    sys.exit()
+    
+PHOTO_PATH = sys.argv[1]
+# PHOTO_PATH = r"/Users/jundali/Desktop/katkam-scaled"
 # PHOTO_PATH = r"../katkam-scaled"
 
 TRAIN_VAL_RATIO = 0.8
@@ -208,5 +216,3 @@ print(accuracy_score(np.stack(sample_data["Y"].values),np.stack(sample_data["Pre
 print("##############################")
 print("Randomly printing 20 samples with their true Y and the predicted Y.")
 print(sample_data.sample(20)[["Filename","Weather","Predict_Y2_Label","Predict_Y3_Label"]].to_string(index=True))
-# with pd.option_context('display.max_rows', None, 'display.max_columns', 6):
-#     print(sample_data.sample(10)[["Filename","Weather","Predict_Y2_Label","Predict_Y3_Label"]].to_string(index=False))
