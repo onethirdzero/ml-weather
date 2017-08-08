@@ -1,6 +1,9 @@
 
+
 # -*- coding: utf-8 -*-
 """VGG16 model for Keras.
+# The CNN is modified from the VGG16 network implemented at
+# https://github.com/fchollet/keras/blob/master/keras/applications/vgg16.py
 # Reference
 - [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/abs/1409.1556)
 """
@@ -14,40 +17,14 @@ from keras.layers import *
 from keras.applications.imagenet_utils import _obtain_input_shape
 import keras.backend as K
 from keras.utils.data_utils import *
-# from ..layers import Flatten
-# from ..layers import Dense
-# from ..layers import Input
-# from ..layers import Conv2D
-# from ..layers import MaxPooling2D
-# from ..layers import GlobalAveragePooling2D
-# from ..layers import GlobalMaxPooling2D
-# from ..engine.topology import get_source_inputs
-# from ..utils import layer_utils
-# from ..utils.data_utils import get_file
-# from .. import backend as K
-# from .imagenet_utils import decode_predictions
-# from .imagenet_utils import preprocess_input
-# from .imagenet_utils import _obtain_input_shape
 
-
-WEIGHTS_PATH = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels.h5'
-WEIGHTS_PATH_NO_TOP = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
 
 
 def network(include_top=True, weights=None,
           input_tensor=None, input_shape=None,
           pooling=None,
           classes=5):
-    """Instantiates the VGG16 architecture.
-    Optionally loads weights pre-trained
-    on ImageNet. Note that when using TensorFlow,
-    for best performance you should set
-    `image_data_format="channels_last"` in your Keras config
-    at ~/.keras/keras.json.
-    The model and the weights are compatible with both
-    TensorFlow and Theano. The data format
-    convention used by the model is the one
-    specified in your Keras config file.
+    """
     # Arguments
         include_top: whether to include the 3 fully-connected
             layers at the top of the network.
@@ -97,7 +74,6 @@ def network(include_top=True, weights=None,
 #                                       data_format=K.image_data_format(),
 #                                       include_top=include_top)
     input_shape = (196,196,3)
-#     print(input_shape)
     if input_tensor is None:
         img_input = Input(shape=input_shape)
     else:
@@ -158,34 +134,5 @@ def network(include_top=True, weights=None,
     # Create model.
     model = Model(inputs, x, name='cnn_d')
 
-    # load weights
-#     if weights == 'imagenet':
-#         if include_top:
-#             weights_path = get_file('vgg16_weights_tf_dim_ordering_tf_kernels.h5',
-#                                     WEIGHTS_PATH,
-#                                     cache_subdir='models')
-#         else:
-#             weights_path = get_file('vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5',
-#                                     WEIGHTS_PATH_NO_TOP,
-#                                     cache_subdir='models')
-#         model.load_weights(weights_path)
-#         if K.backend() == 'theano':
-#             layer_utils.convert_all_kernels_in_model(model)
 
-#         if K.image_data_format() == 'channels_first':
-#             if include_top:
-#                 maxpool = model.get_layer(name='block5_pool')
-#                 shape = maxpool.output_shape[1:]
-#                 dense = model.get_layer(name='fc1')
-#                 layer_utils.convert_dense_weights_data_format(dense, shape, 'channels_first')
-
-#             if K.backend() == 'tensorflow':
-#                 warnings.warn('You are using the TensorFlow backend, yet you '
-#                               'are using the Theano '
-#                               'image data format convention '
-#                               '(`image_data_format="channels_first"`). '
-#                               'For best performance, set '
-#                               '`image_data_format="channels_last"` in '
-#                               'your Keras config '
-#                               'at ~/.keras/keras.json.')
     return model
