@@ -21,6 +21,7 @@ if(len(sys.argv)<2):
     sys.exit()
     
 PHOTO_PATH = sys.argv[1]
+# PHOTO_PATH = r"\\devmachine\e$\data\katkam-secret-location\katkam-scaled"
 # PHOTO_PATH = r"/Users/jundali/Desktop/katkam-scaled"
 # PHOTO_PATH = r"../katkam-scaled"
 
